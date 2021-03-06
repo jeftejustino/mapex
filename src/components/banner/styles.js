@@ -14,6 +14,6 @@ export const Banner = styles.div`
   img{
     margin: 0;
     border: none;
-    height: 245px;
+    height: 220px;
   }
 `

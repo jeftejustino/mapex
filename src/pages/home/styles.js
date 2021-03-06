@@ -53,6 +53,7 @@ export const Info = styles.div`
     .desc{
       margin-top: 20px;
       line-height:1.5;
+      white-space: break-spaces;
     }
 
 `
