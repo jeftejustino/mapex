@@ -56,4 +56,19 @@ export const Info = styles.div`
       white-space: break-spaces;
     }
 
+    .refs{
+      margin-top: 15px;
+
+      h3{
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      div{
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+    }
+
 `

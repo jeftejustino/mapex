@@ -14,7 +14,7 @@ import points from './points'
 function Home() {
   const [showInfo, setShowInfo] = useState(false)
   const [map, setMap] = useState(null)
-  const center = [-3.7433500964236024, -38.575283288955696]
+  const center = [-3.7410376089989086, -38.55677604675294]
   const zoom = 16
   const [position, setPosition] = useState()
   const [currentPoint, setCurrentPoint] = useState({
@@ -50,6 +50,7 @@ function Home() {
   }
 
   const onMove = useCallback(() => {
+    console.log(map.getCenter())
     setPosition(map.getCenter())
   }, [map])
 
@@ -110,16 +111,19 @@ function Home() {
 
           <div className='desc'>{currentPoint.desc}</div>
           <div className='refs'>
+            <h3>Fonte:</h3>
             {currentPoint?.refs &&
               currentPoint?.refs.map((item) => (
-                <a
-                  target='_blank'
-                  rel='noreferrer'
-                  alt='Referencia'
-                  href={item}
-                >
-                  {item}
-                </a>
+                <div>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    alt='Referencia'
+                    href={item}
+                  >
+                    {item}
+                  </a>
+                </div>
               ))}
           </div>
         </Info>
