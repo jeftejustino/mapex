@@ -50,7 +50,6 @@ function Home() {
   }
 
   const onMove = useCallback(() => {
-    console.log(map.getCenter())
     setPosition(map.getCenter())
   }, [map])
 
