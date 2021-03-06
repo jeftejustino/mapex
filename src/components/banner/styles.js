@@ -12,8 +12,8 @@ export const Banner = styles.div`
   background-image: url(${texture});
 
   img{
-    margin: 0;
+    margin: 25px 0;
     border: none;
-    height: 220px;
+    height: 170px;
   }
 `

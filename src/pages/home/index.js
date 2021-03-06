@@ -109,6 +109,19 @@ function Home() {
           />
 
           <div className='desc'>{currentPoint.desc}</div>
+          <div className='refs'>
+            {currentPoint?.refs &&
+              currentPoint?.refs.map((item) => (
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  alt='Referencia'
+                  href={item}
+                >
+                  {item}
+                </a>
+              ))}
+          </div>
         </Info>
       </Content>
     </Container>
