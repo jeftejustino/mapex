@@ -7,8 +7,9 @@ import {
   useMapEvents,
 } from 'react-leaflet'
 import L from 'leaflet'
-import Banner from '../../components/banner'
-import { Container, Content, Map, Info } from './styles'
+import Banner from '../../components/Banner'
+import Select from '../../components/Select'
+import { Container, Content, Map, Info, SelectContent } from './styles'
 import points from './points'
 
 function Home() {
@@ -40,13 +41,21 @@ function Home() {
       overlayWidth = -300
     }
 
-    const centerPoint = e.containerPoint
-    // const centerPoint = map.latLngToLayerPoint(point.latLng)
-    const targetPoint = centerPoint.subtract([overlayWidth, 0])
-    const targetLatLng = map.containerPointToLatLng(targetPoint)
-    // L.popup().setLatLng(point.latLng).setContent(point.title).openOn(map)
-    map.panTo(targetLatLng)
-    setCurrentPoint(point)
+    if (e) {
+      const centerPoint = e.containerPoint
+      const targetPoint = centerPoint.subtract([overlayWidth, 0])
+      const targetLatLng = map.containerPointToLatLng(targetPoint)
+      map.panTo(targetLatLng)
+      setCurrentPoint(point)
+    } else {
+      setCurrentPoint({
+        id: 0,
+        title: '',
+        desc: '',
+        soundcloud: '',
+        latLng: center,
+      })
+    }
   }
 
   const onMove = useCallback(() => {
@@ -68,6 +77,9 @@ function Home() {
     <Container>
       <Banner />
       <Content>
+        <SelectContent>
+          <Select points={points} currentPoint={currentPoint} />
+        </SelectContent>
         <Map toogle={showInfo}>
           <MapContainer
             center={center}
@@ -94,6 +106,13 @@ function Home() {
           </MapContainer>
         </Map>
         <Info toogle={showInfo}>
+          <button
+            className='close'
+            type='button'
+            onClick={() => markerClick(null, currentPoint)}
+          >
+            X
+          </button>
           <img src={currentPoint.pictograma} alt='pictograma' />
 
           <div className='title'>{currentPoint.title}</div>

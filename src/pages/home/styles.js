@@ -15,15 +15,23 @@ export const Content = styles.div`
   position: relative;
 `
 
+export const SelectContent = styles.div`
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  width: 310px;
+  z-index: 3;
+`
+
 export const Map = styles.div`
-    background: #0f0;
+  background: #0f0;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  > div{
+    widht: 100%;
     height: 100%;
-    position: relative;
-    z-index: 1;
-    > div{
-      widht: 100%;
-      height: 100%;
-    }
+  }
 `
 
 export const Info = styles.div`
@@ -37,6 +45,17 @@ export const Info = styles.div`
     width: 600px;
     height: 100%;
     z-index: 2;
+
+    .close{
+      position: absolute;
+      z-index: 2;
+      color: #000;
+      font-weight: bold;
+      background: none;
+      top: 10px;
+      left: 10px;
+      cursor: pointer;
+    }
     
     img{
       max-width: 380px;
