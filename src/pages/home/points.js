@@ -23,7 +23,7 @@ Temos ainda a obra “Quadrados” do artista cearense Sérvulo esmeraldo, conhe
   },
   {
     id: 2,
-    latLng: [-3.742267757275762, -38.574289000708134],
+    latLng: [-3.742497700250048, -38.57429267935315],
     pictograma: pic2,
     soundcloud:
       'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/988882933&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
@@ -38,7 +38,7 @@ As Bibliotecas da Universidade Federal do Ceará foram surgindo à medida que no
   },
   {
     id: 3,
-    latLng: [-3.7417418108312637, -38.53898814275113],
+    latLng: [-3.741930779825919, -38.5390806288496],
     pictograma: pic3,
     soundcloud:
       'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/995065387&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
@@ -51,7 +51,7 @@ No terreno onde se encontra a atual Reitoria da UFC, ergueiram-se duas casas, po
   },
   {
     id: 4,
-    latLng: [-3.7389511982272876, -38.56925502731602],
+    latLng: [-3.739214531013888, -38.56944122599653],
     pictograma: pic4,
     soundcloud:
       'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/992437390&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
@@ -62,7 +62,7 @@ Com o intuito de divulgar e popularizar a ciência para alunos, professores e o 
   },
   {
     id: 5,
-    latLng: [-3.740808880717343, -38.53945251400548],
+    latLng: [-3.7408918532587885, -38.539668432298754],
     pictograma: pic5,
     soundcloud:
       'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/992512858&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',

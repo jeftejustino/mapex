@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Content, ReactSelect } from './styles'
 
-function ComponentSelect({ points, currentPoint }) {
+function ComponentSelect({ points, currentPoint, onChange }) {
   const [options, setOptions] = useState([])
   const [defaultValue, setDefaultValue] = useState([])
 
@@ -28,7 +28,7 @@ function ComponentSelect({ points, currentPoint }) {
 
   return (
     <Content>
-      <ReactSelect options={options} setValue={defaultValue} />
+      <ReactSelect options={options} value={defaultValue} onChange={onChange} />
     </Content>
   )
 }

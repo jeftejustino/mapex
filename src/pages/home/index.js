@@ -4,6 +4,7 @@ import {
   TileLayer,
   Marker,
   Popup,
+  Tooltip,
   useMapEvents,
 } from 'react-leaflet'
 import L from 'leaflet'
@@ -41,13 +42,7 @@ function Home() {
       overlayWidth = -300
     }
 
-    if (e) {
-      const centerPoint = e.containerPoint
-      const targetPoint = centerPoint.subtract([overlayWidth, 0])
-      const targetLatLng = map.containerPointToLatLng(targetPoint)
-      map.panTo(targetLatLng)
-      setCurrentPoint(point)
-    } else {
+    if (!e || currentPoint.id === point.id) {
       setCurrentPoint({
         id: 0,
         title: '',
@@ -55,6 +50,20 @@ function Home() {
         soundcloud: '',
         latLng: center,
       })
+    } else {
+      setCurrentPoint(point)
+    }
+
+    if (e) {
+      const centerPoint = e.containerPoint
+      const targetPoint = centerPoint.subtract([overlayWidth, 0])
+      const targetLatLng = map.containerPointToLatLng(targetPoint)
+      map.panTo(targetLatLng)
+    } else {
+      const centerPoint = map.getSize().divideBy(2)
+      const targetPoint = centerPoint.subtract([300, 0])
+      const targetLatLng = map.containerPointToLatLng(targetPoint)
+      map.panTo(targetLatLng)
     }
   }
 
@@ -73,12 +82,30 @@ function Home() {
     return false
   }, [map, onMove])
 
+  function onChange(v) {
+    const point = points.filter((item) => item.id === v.value)[0]
+    setShowInfo(true)
+    map.panTo(point.latLng, { animate: false })
+    // setTimeout(() => {
+    const centerPoint = map.getSize().divideBy(2)
+    const targetPoint = centerPoint.subtract([-300, 0])
+    const targetLatLng = map.containerPointToLatLng(targetPoint)
+    map.panTo(targetLatLng)
+    // }, 500)
+
+    setCurrentPoint(point)
+  }
+
   return (
     <Container>
       <Banner />
       <Content>
         <SelectContent>
-          <Select points={points} currentPoint={currentPoint} />
+          <Select
+            points={points}
+            currentPoint={currentPoint}
+            onChange={onChange}
+          />
         </SelectContent>
         <Map toogle={showInfo}>
           <MapContainer
@@ -95,13 +122,16 @@ function Home() {
             {points.map((point) => (
               <Marker
                 key={point.id}
+                riseOnHover
                 position={point.latLng}
                 eventHandlers={{
                   click: (e) => {
                     markerClick(e, point)
                   },
                 }}
-              />
+              >
+                <Tooltip>{point.title}</Tooltip>
+              </Marker>
             ))}
           </MapContainer>
         </Map>
