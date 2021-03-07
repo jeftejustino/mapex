@@ -16,7 +16,7 @@ import points from './points'
 function Home() {
   const [showInfo, setShowInfo] = useState(false)
   const [map, setMap] = useState(null)
-  const center = [-3.7410376089989086, -38.55677604675294]
+  const center = [-3.743151391712659, -38.570284343823126]
   const zoom = 16
   const [position, setPosition] = useState()
   const [currentPoint, setCurrentPoint] = useState({
