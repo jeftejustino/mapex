@@ -10,6 +10,8 @@ const points = [
     id: 1,
     latLng: [-3.7387407698346773, -38.56944200339161],
     pictograma: pic1,
+    iframe:
+      'https://widget.spreaker.com/player?episode_id=44185369&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true',
     soundcloud:
       'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/988430944&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
     title: 'Praça Prisco Bezerra',
@@ -25,6 +27,8 @@ Temos ainda a obra “Quadrados” do artista cearense Sérvulo esmeraldo, conhe
     id: 2,
     latLng: [-3.742497700250048, -38.57429267935315],
     pictograma: pic2,
+    iframe:
+      'https://widget.spreaker.com/player?episode_id=44185251&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true',
     soundcloud:
       'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/988882933&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
     title: 'Biblioteca Central do Campus do Pici',
@@ -40,6 +44,8 @@ As Bibliotecas da Universidade Federal do Ceará foram surgindo à medida que no
     id: 3,
     latLng: [-3.741930779825919, -38.5390806288496],
     pictograma: pic3,
+    iframe:
+      'https://widget.spreaker.com/player?episode_id=44185408&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true',
     soundcloud:
       'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/995065387&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
     title: 'Reitoria da UFC',
@@ -53,6 +59,8 @@ No terreno onde se encontra a atual Reitoria da UFC, ergueiram-se duas casas, po
     id: 4,
     latLng: [-3.739214531013888, -38.56944122599653],
     pictograma: pic4,
+    iframe:
+      'https://widget.spreaker.com/player?episode_id=44185333&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true',
     soundcloud:
       'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/992437390&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
     title: 'Seara da Ciência',
@@ -64,6 +72,8 @@ Com o intuito de divulgar e popularizar a ciência para alunos, professores e o 
     id: 5,
     latLng: [-3.7408918532587885, -38.539668432298754],
     pictograma: pic5,
+    iframe:
+      'https://widget.spreaker.com/player?episode_id=44185381&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true',
     soundcloud:
       'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/992512858&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
     title: 'Museu de Arte da UFC',
@@ -77,6 +87,8 @@ O MAUC tem 9 salas destinadas à exposição de longa duração, sendo 4 coletiv
     id: 6,
     latLng: [-3.748749484796008, -38.579266107525825],
     pictograma: pic6,
+    iframe:
+      'https://widget.spreaker.com/player?episode_id=44185041&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true',
     soundcloud:
       'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/989140939&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
     title: 'Bloco Acadêmico SMD',

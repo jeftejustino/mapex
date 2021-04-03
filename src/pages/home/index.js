@@ -154,7 +154,7 @@ function Home() {
             title='soundcloud'
             frameBorder='no'
             allow='autoplay'
-            src={currentPoint.soundcloud}
+            src={currentPoint.iframe || currentPoint.soundcloud}
           />
 
           <div className='desc'>{currentPoint.desc}</div>
